@@ -1,9 +1,9 @@
 import { createClient } from "@supabase/supabase-js";
 import { auth } from "./firebase.js";
 
-const supabaseUrl = "https://rdbqcqnwazvjakktnptv.supabase.co";
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 
-const supabasePublishableKey = "sb_publishable_8wfFb0nlSTzAhaoSQH1yXg_EoOhV-WR";
+const supabasePublishableKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
 export const supabase = createClient(
   supabaseUrl,
